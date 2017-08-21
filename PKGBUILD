@@ -2,7 +2,7 @@
 
 pkgname=gpm-s6serv
 pkgver=0.1
-pkgrel=2
+pkgrel=3
 pkgdesc="gpm service for s6"
 arch=(x86_64)
 license=('beerware')
@@ -24,7 +24,7 @@ package() {
 	
 	# log
 	install -Dm 0755 "$srcdir/gpm.log.run.s6" "$pkgdir/etc/s6-serv/available/classic/gpm/log/run"
-	install -Dm 0644 "$srcdir/gpm.logd" "$pkgdir/etc/s6-serv/log.d/serv/gpm"
+	install -Dm 0644 "$srcdir/gpm.logd" "$pkgdir/etc/s6-serv/log.d/gpm"
 	
 	install -Dm 0755 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/gpm-s6serv/LICENSE"
 }
